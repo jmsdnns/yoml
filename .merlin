@@ -1,0 +1,5 @@
+B +threads
+B build/release/yoml
+PKG ctypes
+PKG ctypes.foreign
+S src/yoml
