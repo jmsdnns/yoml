@@ -1,11 +1,14 @@
-pushd yamlrs
+printf "\nBUILDING RUST\n"
+pushd rust
 cargo build
 export LD_LIBRARY_PATH=$PWD/target/debug
 popd
 
-pushd ../yoml
+printf "\nBUILDING OCAML\n"
+pushd ocaml
 pds
 make
 popd
 
-./build/release/yoml/yoml.native
+printf "\nRUNNING YOML\n"
+./ocaml/build/release/yoml/yoml.native
